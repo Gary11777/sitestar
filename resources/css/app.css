@@ -8,4 +8,103 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-peach-50: #fff7f3;
+    --color-peach-100: #ffefe8;
+    --color-peach-200: #ffd7c9;
+    --color-peach-300: #ffb49d;
+    --color-peach-400: #ff8b6a;
+    --color-peach-500: #ff6f4f;
+    --color-peach-600: #f35438;
+    --color-peach-700: #d8432d;
+    --color-peach-800: #b33827;
+    --color-peach-900: #922f24;
+
+    --color-coral-50: #fff5f6;
+    --color-coral-100: #ffecef;
+    --color-coral-200: #ffd0d7;
+    --color-coral-300: #ffa7b3;
+    --color-coral-400: #ff7386;
+    --color-coral-500: #ff4f68;
+    --color-coral-600: #ee2c4b;
+    --color-coral-700: #c71f3a;
+    --color-coral-800: #a21d33;
+    --color-coral-900: #861c2f;
+}
+
+@layer base {
+    [x-cloak] {
+        display: none !important;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+    }
+
+    body {
+        @apply bg-white text-zinc-950 antialiased;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium tracking-tight transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+    }
+
+    .btn-primary {
+        @apply bg-zinc-950 text-white shadow-sm hover:bg-zinc-900;
+    }
+
+    .btn-outline {
+        @apply border border-zinc-200 bg-white text-zinc-950 shadow-sm hover:border-zinc-300 hover:bg-zinc-50;
+    }
+
+    .card {
+        @apply rounded-2xl border border-zinc-200 bg-white shadow-[0_1px_0_rgba(0,0,0,0.03)] transition duration-200;
+    }
+
+    .card-hover {
+        @apply hover:-translate-y-0.5 hover:border-zinc-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.07)];
+    }
+}
+
+@layer utilities {
+    .text-gradient {
+        @apply bg-gradient-to-r from-amber-500 via-peach-500 to-coral-500 bg-clip-text text-transparent;
+    }
+
+    .bg-sitestar-glow {
+        background: radial-gradient(600px circle at 20% 0%, rgba(245, 158, 11, 0.22), transparent 60%),
+            radial-gradient(700px circle at 90% 20%, rgba(255, 111, 79, 0.18), transparent 55%),
+            radial-gradient(700px circle at 50% 100%, rgba(255, 79, 104, 0.14), transparent 55%);
+    }
+
+    [data-reveal] {
+        --reveal-y: 14px;
+
+        opacity: 0;
+        translate: var(--tw-translate-x, 0px) calc(var(--tw-translate-y, 0px) + var(--reveal-y));
+        filter: blur(6px);
+        transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+            translate 700ms cubic-bezier(0.16, 1, 0.3, 1), filter 700ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    [data-reveal].is-revealed {
+        --reveal-y: 0px;
+
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    [data-parallax] {
+        translate: calc(var(--tw-translate-x, 0px) + var(--parallax-x, 0px))
+            calc(var(--tw-translate-y, 0px) + var(--parallax-y, 0px));
+        will-change: translate;
+    }
 }
