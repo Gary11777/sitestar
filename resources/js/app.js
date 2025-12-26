@@ -252,5 +252,19 @@ Alpine.data('obfuscatedEmail', (user, domain) => ({
     }
 }));
 
+// Phone obfuscation - protects phone number from spam bots
+Alpine.data('obfuscatedPhone', (parts) => ({
+    parts: parts,
+    get displayPhone() {
+        return this.parts.join('');
+    },
+    get telLink() {
+        return this.parts.join('').replace(/[\s\-]/g, '');
+    },
+    call() {
+        window.location.href = 'tel:' + this.telLink;
+    }
+}));
+
 // Start Alpine
 Alpine.start();
