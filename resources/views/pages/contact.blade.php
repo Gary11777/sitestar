@@ -39,9 +39,7 @@
                         </div>
                         <div>
                             <h3 class="text-surface-100 font-medium mb-1">Email Us</h3>
-                            <a href="mailto:info@sitestar.by" class="text-surface-400 hover:text-primary-500 transition-colors">
-                                info@sitestar.by
-                            </a>
+                            <a href="#" x-data="obfuscatedEmail('info', 'sitestar.by')" @click.prevent="openMailto()" x-text="displayEmail" class="text-surface-400 hover:text-primary-500 transition-colors"></a>
                         </div>
                     </div>
                     

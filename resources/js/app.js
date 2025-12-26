@@ -240,5 +240,17 @@ Alpine.data('typed', (strings, typeSpeed = 100, backSpeed = 50, backDelay = 2000
     }
 }));
 
+// Email obfuscation - protects email from spam bots
+Alpine.data('obfuscatedEmail', (user, domain) => ({
+    user: user,
+    domain: domain,
+    get displayEmail() {
+        return this.user + '@' + this.domain;
+    },
+    openMailto() {
+        window.location.href = 'mailto:' + this.user + '@' + this.domain;
+    }
+}));
+
 // Start Alpine
 Alpine.start();
