@@ -132,19 +132,19 @@ Alpine.data('contactForm', () => ({
         this.errors = {};
         
         if (!this.form.name.trim()) {
-            this.errors.name = 'Name is required';
+            this.errors.name = 'Имя обязательно';
         }
         
         if (!this.form.email.trim()) {
-            this.errors.email = 'Email is required';
+            this.errors.email = 'Email обязателен';
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.email)) {
-            this.errors.email = 'Please enter a valid email';
+            this.errors.email = 'Введите корректный email';
         }
         
         if (!this.form.message.trim()) {
-            this.errors.message = 'Message is required';
+            this.errors.message = 'Сообщение обязательно';
         } else if (this.form.message.trim().length < 10) {
-            this.errors.message = 'Message must be at least 10 characters';
+            this.errors.message = 'Сообщение должно содержать минимум 10 символов';
         }
         
         return Object.keys(this.errors).length === 0;
@@ -192,10 +192,10 @@ Alpine.data('contactForm', () => ({
                 if (data.errors) {
                     this.errors = data.errors;
                 }
-                this.errorMessage = data.message || 'Something went wrong. Please try again.';
+                this.errorMessage = data.message || 'Что-то пошло не так. Попробуйте ещё раз.';
             }
         } catch (error) {
-            this.errorMessage = 'Network error. Please check your connection and try again.';
+            this.errorMessage = 'Ошибка сети. Проверьте подключение и попробуйте снова.';
         } finally {
             this.loading = false;
         }

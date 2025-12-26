@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Portfolio')
-@section('description', 'Explore our portfolio of web development projects. See how we\'ve helped businesses create exceptional digital experiences.')
+@section('title', 'Портфолио')
+@section('description', 'Изучите наше портфолио веб-проектов. Узнайте, как мы помогли бизнесам создать исключительный цифровой опыт.')
 
 @section('content')
 <!-- Hero Section -->
@@ -13,13 +13,13 @@
     <div class="relative max-w-7xl mx-auto text-center">
         <div x-data="reveal()" class="reveal">
             <span class="inline-block px-4 py-1.5 bg-primary-100 text-primary-500 text-sm font-medium rounded-full mb-6">
-                Our Work
+                Наши работы
             </span>
             <h1 class="heading-xl text-surface-100 mb-6">
-                Featured <span class="text-gradient">Projects</span>
+                Избранные <span class="text-gradient">проекты</span>
             </h1>
             <p class="text-body max-w-2xl mx-auto">
-                A curated selection of our recent work, showcasing our expertise in creating impactful digital solutions for diverse industries.
+                Подборка наших недавних работ, демонстрирующая нашу экспертизу в создании эффективных цифровых решений для разных отраслей.
             </p>
         </div>
     </div>
@@ -87,9 +87,9 @@
                                 DimGent.com
                             </h3>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-surface-800 text-surface-400 text-xs rounded-full">Corporate</span>
+                                <span class="px-3 py-1 bg-surface-800 text-surface-400 text-xs rounded-full">Корпоративный</span>
                                 <span class="px-3 py-1 bg-surface-800 text-surface-400 text-xs rounded-full">Full-Stack</span>
-                                <span class="px-3 py-1 bg-surface-800 text-surface-400 text-xs rounded-full">International</span>
+                                <span class="px-3 py-1 bg-surface-800 text-surface-400 text-xs rounded-full">Международный</span>
                             </div>
                         </div>
                         <div class="w-10 h-10 bg-surface-800 rounded-full flex items-center justify-center group-hover:bg-primary-500 transition-colors">
@@ -99,7 +99,7 @@
                         </div>
                     </div>
                     <p class="text-surface-400 leading-relaxed">
-                        A sophisticated corporate platform for an international consulting firm. Features a modern, multilingual interface with seamless navigation, dynamic content management, and optimized performance for global audiences.
+                        Современная корпоративная платформа для международной консалтинговой компании. Многоязычный интерфейс, удобная навигация, динамическое управление контентом и оптимизация для глобальной аудитории.
                     </p>
                 </div>
             </a>
@@ -163,9 +163,9 @@
                                 DimGent.by
                             </h3>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-surface-800 text-surface-400 text-xs rounded-full">Business</span>
+                                <span class="px-3 py-1 bg-surface-800 text-surface-400 text-xs rounded-full">Бизнес</span>
                                 <span class="px-3 py-1 bg-surface-800 text-surface-400 text-xs rounded-full">Laravel</span>
-                                <span class="px-3 py-1 bg-surface-800 text-surface-400 text-xs rounded-full">Regional</span>
+                                <span class="px-3 py-1 bg-surface-800 text-surface-400 text-xs rounded-full">Региональный</span>
                             </div>
                         </div>
                         <div class="w-10 h-10 bg-surface-800 rounded-full flex items-center justify-center group-hover:bg-accent-500 transition-colors">
@@ -175,7 +175,7 @@
                         </div>
                     </div>
                     <p class="text-surface-400 leading-relaxed">
-                        A localized business platform tailored for the Belarusian market. Built with Laravel, featuring clean architecture, responsive design, and streamlined user experience focused on regional accessibility and engagement.
+                        Локализованная бизнес-платформа для белорусского рынка. Создана на Laravel с чистой архитектурой, адаптивным дизайном и удобным пользовательским опытом.
                     </p>
                 </div>
             </a>
@@ -210,16 +210,16 @@
                 <div class="relative p-8">
                     <div class="flex items-start justify-between gap-4 mb-4">
                         <div>
-                            <h3 class="text-2xl font-bold text-surface-100 mb-2">E-commerce Platform</h3>
+                            <h3 class="text-2xl font-bold text-surface-100 mb-2">Интернет-магазин</h3>
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-3 py-1 bg-surface-800 text-surface-400 text-xs rounded-full">E-commerce</span>
                                 <span class="px-3 py-1 bg-surface-800 text-surface-400 text-xs rounded-full">React</span>
                             </div>
                         </div>
-                        <span class="px-3 py-1 bg-surface-800 text-surface-500 text-xs rounded-full">Coming Soon</span>
+                        <span class="px-3 py-1 bg-surface-800 text-surface-500 text-xs rounded-full">Скоро</span>
                     </div>
                     <p class="text-surface-400 leading-relaxed">
-                        A high-performance online store with advanced filtering, real-time inventory, and seamless checkout experience. Currently in development.
+                        Высокопроизводительный онлайн-магазин с расширенной фильтрацией, инвентаризацией в реальном времени и удобным оформлением заказа. В разработке.
                     </p>
                 </div>
             </div>
@@ -263,16 +263,16 @@
                 <div class="relative p-8">
                     <div class="flex items-start justify-between gap-4 mb-4">
                         <div>
-                            <h3 class="text-2xl font-bold text-surface-100 mb-2">Analytics Dashboard</h3>
+                            <h3 class="text-2xl font-bold text-surface-100 mb-2">Аналитическая панель</h3>
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-3 py-1 bg-surface-800 text-surface-400 text-xs rounded-full">SaaS</span>
                                 <span class="px-3 py-1 bg-surface-800 text-surface-400 text-xs rounded-full">Vue.js</span>
                             </div>
                         </div>
-                        <span class="px-3 py-1 bg-surface-800 text-surface-500 text-xs rounded-full">Coming Soon</span>
+                        <span class="px-3 py-1 bg-surface-800 text-surface-500 text-xs rounded-full">Скоро</span>
                     </div>
                     <p class="text-surface-400 leading-relaxed">
-                        A comprehensive analytics dashboard with real-time data visualization, custom reports, and intuitive user management.
+                        Комплексная аналитическая панель с визуализацией данных в реальном времени, настраиваемыми отчётами и удобным управлением пользователями.
                     </p>
                 </div>
             </div>
@@ -287,19 +287,19 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8" x-data="reveal()" class="reveal">
             <div class="text-center">
                 <div class="text-4xl md:text-5xl font-bold text-surface-100 mb-2" x-data="counter(50)" x-text="current + '+'"></div>
-                <div class="text-surface-400">Projects Completed</div>
+                <div class="text-surface-400">Завершённых проектов</div>
             </div>
             <div class="text-center">
                 <div class="text-4xl md:text-5xl font-bold text-surface-100 mb-2" x-data="counter(40)" x-text="current + '+'"></div>
-                <div class="text-surface-400">Happy Clients</div>
+                <div class="text-surface-400">Довольных клиентов</div>
             </div>
             <div class="text-center">
                 <div class="text-4xl md:text-5xl font-bold text-surface-100 mb-2" x-data="counter(5)" x-text="current + '+'"></div>
-                <div class="text-surface-400">Years Experience</div>
+                <div class="text-surface-400">Лет опыта</div>
             </div>
             <div class="text-center">
                 <div class="text-4xl md:text-5xl font-bold text-surface-100 mb-2" x-data="counter(15)" x-text="current + '+'"></div>
-                <div class="text-surface-400">Technologies</div>
+                <div class="text-surface-400">Технологий</div>
             </div>
         </div>
     </div>
@@ -318,10 +318,10 @@
             
             <div class="relative px-8 py-16 sm:px-16 sm:py-20 text-center">
                 <h2 class="heading-lg text-surface-100 mb-4">
-                    Have a Project in Mind?
+                    Есть идея проекта?
                 </h2>
                 <p class="text-body max-w-xl mx-auto mb-10">
-                    We'd love to hear about your next project. Let's create something amazing together.
+                    Мы будем рады услышать о вашем следующем проекте. Давайте создадим что-то удивительное вместе.
                 </p>
                 <a 
                     href="{{ route('contact') }}" 
@@ -331,7 +331,7 @@
                     @mouseleave="handleMouseLeave"
                     :style="{ transform: `translate(${x}px, ${y}px)` }"
                 >
-                    Start Your Project
+                    Начать проект
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                     </svg>

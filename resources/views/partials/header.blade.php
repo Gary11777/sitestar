@@ -24,10 +24,10 @@
             <div class="hidden md:flex items-center gap-1">
                 @php
                     $navItems = [
-                        ['route' => 'home', 'label' => 'Home'],
-                        ['route' => 'about', 'label' => 'About'],
-                        ['route' => 'portfolio', 'label' => 'Portfolio'],
-                        ['route' => 'contact', 'label' => 'Contact'],
+                        ['route' => 'home', 'label' => 'Главная'],
+                        ['route' => 'about', 'label' => 'О нас'],
+                        ['route' => 'portfolio', 'label' => 'Портфолио'],
+                        ['route' => 'contact', 'label' => 'Контакты'],
                     ];
                 @endphp
                 
@@ -54,7 +54,7 @@
                     @mouseleave="handleMouseLeave"
                     :style="{ transform: `translate(${x}px, ${y}px)` }"
                 >
-                    Start a Project
+                    Начать проект
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                     </svg>
@@ -107,7 +107,7 @@
                     class="btn-primary w-full justify-center"
                     @click="close()"
                 >
-                    Start a Project
+                    Начать проект
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                     </svg>

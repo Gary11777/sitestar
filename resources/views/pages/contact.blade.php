@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us')
-@section('description', 'Get in touch with SiteStar. Let\'s discuss your project and how we can help bring your vision to life.')
+@section('title', 'Контакты')
+@section('description', 'Свяжитесь с SiteStar. Давайте обсудим ваш проект и то, как мы можем помочь воплотить вашу идею в жизнь.')
 
 @push('turnstile')
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -20,13 +20,13 @@
             <!-- Contact Info -->
             <div x-data="reveal()" class="reveal">
                 <span class="inline-block px-4 py-1.5 bg-primary-100 text-primary-500 text-sm font-medium rounded-full mb-6">
-                    Get in Touch
+                    Связаться с нами
                 </span>
                 <h1 class="heading-xl text-surface-100 mb-6">
-                    Let's Start a <span class="text-gradient">Conversation</span>
+                    Начнём <span class="text-gradient">Разговор</span>
                 </h1>
                 <p class="text-body mb-12">
-                    Have a project in mind? We'd love to hear about it. Fill out the form and we'll get back to you within 24 hours.
+                    Есть идея проекта? Мы будем рады услышать о ней. Заполните форму, и мы свяжемся с вами в течение 24 часов.
                 </p>
                 
                 <!-- Contact Details -->
@@ -38,7 +38,7 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-surface-100 font-medium mb-1">Email Us</h3>
+                            <h3 class="text-surface-100 font-medium mb-1">Напишите нам</h3>
                             <a href="#" x-data="obfuscatedEmail('info', 'sitestar.by')" @click.prevent="openMailto()" x-text="displayEmail" class="text-surface-400 hover:text-primary-500 transition-colors"></a>
                         </div>
                     </div>
@@ -51,8 +51,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-surface-100 font-medium mb-1">Location</h3>
-                            <p class="text-surface-400">Minsk, Belarus</p>
+                            <h3 class="text-surface-100 font-medium mb-1">Местоположение</h3>
+                            <p class="text-surface-400">Минск, Беларусь</p>
                         </div>
                     </div>
                     
@@ -63,7 +63,7 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-surface-100 font-medium mb-1">Call Us</h3>
+                            <h3 class="text-surface-100 font-medium mb-1">Позвоните нам</h3>
                             <a href="#" x-data="obfuscatedPhone(['+375', ' 29 ', '172', '-58-', '72'])" @click.prevent="call()" x-text="displayPhone" class="text-surface-400 hover:text-primary-500 transition-colors"></a>
                         </div>
                     </div>
@@ -75,15 +75,15 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-surface-100 font-medium mb-1">Response Time</h3>
-                            <p class="text-surface-400">Within 24 hours</p>
+                            <h3 class="text-surface-100 font-medium mb-1">Время ответа</h3>
+                            <p class="text-surface-400">В течение 24 часов</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Social Links -->
                 <div>
-                    <h3 class="text-surface-100 font-medium mb-4">Follow Us</h3>
+                    <h3 class="text-surface-100 font-medium mb-4">Мы в соцсетях</h3>
                     <div class="flex gap-3">
                         <a href="#" class="w-10 h-10 bg-surface-800 rounded-lg flex items-center justify-center text-surface-400 hover:bg-surface-700 hover:text-surface-100 transition-all">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -122,15 +122,15 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-surface-100 mb-2">Message Sent!</h3>
+                            <h3 class="text-2xl font-bold text-surface-100 mb-2">Сообщение отправлено!</h3>
                             <p class="text-surface-400 mb-6">
-                                Thank you for reaching out. We'll get back to you within 24 hours.
+                                Спасибо за обращение. Мы свяжемся с вами в течение 24 часов.
                             </p>
                             <button 
                                 @click="success = false" 
                                 class="btn-secondary"
                             >
-                                Send Another Message
+                                Отправить ещё сообщение
                             </button>
                         </div>
                         
@@ -152,7 +152,7 @@
                             <!-- Name Field -->
                             <div>
                                 <label for="name" class="block text-sm font-medium text-surface-300 mb-2">
-                                    Name <span class="text-red-400">*</span>
+                                    Имя <span class="text-red-400">*</span>
                                 </label>
                                 <input 
                                     type="text" 
@@ -160,7 +160,7 @@
                                     x-model="form.name"
                                     class="input"
                                     :class="errors.name ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : ''"
-                                    placeholder="John Doe"
+                                    placeholder="Иван Иванов"
                                 >
                                 <p x-show="errors.name" x-text="errors.name" class="mt-2 text-sm text-red-400"></p>
                             </div>
@@ -176,7 +176,7 @@
                                     x-model="form.email"
                                     class="input"
                                     :class="errors.email ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : ''"
-                                    placeholder="john@example.com"
+                                    placeholder="ivan@example.com"
                                 >
                                 <p x-show="errors.email" x-text="errors.email" class="mt-2 text-sm text-red-400"></p>
                             </div>
@@ -184,21 +184,21 @@
                             <!-- Company Field (Optional) -->
                             <div>
                                 <label for="company" class="block text-sm font-medium text-surface-300 mb-2">
-                                    Company <span class="text-surface-500">(Optional)</span>
+                                    Компания <span class="text-surface-500">(Необязательно)</span>
                                 </label>
                                 <input 
                                     type="text" 
                                     id="company" 
                                     x-model="form.company"
                                     class="input"
-                                    placeholder="Your Company"
+                                    placeholder="Ваша компания"
                                 >
                             </div>
                             
                             <!-- Message Field -->
                             <div>
                                 <label for="message" class="block text-sm font-medium text-surface-300 mb-2">
-                                    Message <span class="text-red-400">*</span>
+                                    Сообщение <span class="text-red-400">*</span>
                                 </label>
                                 <textarea 
                                     id="message" 
@@ -206,7 +206,7 @@
                                     rows="5"
                                     class="input resize-none"
                                     :class="errors.message ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : ''"
-                                    placeholder="Tell us about your project..."
+                                    placeholder="Расскажите о вашем проекте..."
                                 ></textarea>
                                 <p x-show="errors.message" x-text="errors.message" class="mt-2 text-sm text-red-400"></p>
                             </div>
@@ -236,13 +236,13 @@
                                 :disabled="loading"
                                 :class="loading ? 'opacity-70 cursor-not-allowed' : ''"
                             >
-                                <span x-show="!loading">Send Message</span>
+                                <span x-show="!loading">Отправить сообщение</span>
                                 <span x-show="loading" class="flex items-center gap-2">
                                     <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                     </svg>
-                                    Sending...
+                                    Отправка...
                                 </span>
                                 <svg x-show="!loading" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -250,7 +250,7 @@
                             </button>
                             
                             <p class="text-xs text-surface-500 text-center">
-                                By submitting this form, you agree to our privacy policy.
+                                Отправляя эту форму, вы соглашаетесь с нашей политикой конфиденциальности.
                             </p>
                         </form>
                     </div>
@@ -268,7 +268,7 @@
             <span class="inline-block px-4 py-1.5 bg-accent-300/30 text-accent-600 text-sm font-medium rounded-full mb-4">
                 FAQ
             </span>
-            <h2 class="heading-lg text-surface-100 mb-4">Frequently Asked Questions</h2>
+            <h2 class="heading-lg text-surface-100 mb-4">Часто задаваемые вопросы</h2>
         </div>
         
         <!-- FAQ Items -->
@@ -279,7 +279,7 @@
                     @click="active = active === 1 ? null : 1"
                     class="w-full px-6 py-5 text-left flex items-center justify-between gap-4"
                 >
-                    <span class="font-medium text-surface-100">What is your typical project timeline?</span>
+                    <span class="font-medium text-surface-100">Каковы типичные сроки реализации проекта?</span>
                     <svg 
                         class="w-5 h-5 text-surface-400 transition-transform duration-200"
                         :class="active === 1 ? 'rotate-180' : ''"
@@ -296,7 +296,7 @@
                     class="px-6 pb-5"
                 >
                     <p class="text-surface-400">
-                        Project timelines vary based on complexity and scope. A simple landing page might take 1-2 weeks, while a full web application could take 2-3 months. We'll provide a detailed timeline during our initial consultation.
+                        Сроки реализации зависят от сложности и объёма проекта. Простой лендинг может занять 1-2 недели, а полноценное веб-приложение — 2-3 месяца. Мы предоставим детальный график на первой консультации.
                     </p>
                 </div>
             </div>
@@ -307,7 +307,7 @@
                     @click="active = active === 2 ? null : 2"
                     class="w-full px-6 py-5 text-left flex items-center justify-between gap-4"
                 >
-                    <span class="font-medium text-surface-100">How much does a website cost?</span>
+                    <span class="font-medium text-surface-100">Сколько стоит создание сайта?</span>
                     <svg 
                         class="w-5 h-5 text-surface-400 transition-transform duration-200"
                         :class="active === 2 ? 'rotate-180' : ''"
@@ -324,7 +324,7 @@
                     class="px-6 pb-5"
                 >
                     <p class="text-surface-400">
-                        Every project is unique, and pricing depends on your specific requirements. We offer competitive rates and provide detailed quotes after understanding your needs. Contact us for a free consultation and estimate.
+                        Каждый проект уникален, и стоимость зависит от ваших требований. Мы предлагаем конкурентные цены и предоставляем детальные расчёты после обсуждения ваших потребностей. Свяжитесь с нами для бесплатной консультации.
                     </p>
                 </div>
             </div>
@@ -335,7 +335,7 @@
                     @click="active = active === 3 ? null : 3"
                     class="w-full px-6 py-5 text-left flex items-center justify-between gap-4"
                 >
-                    <span class="font-medium text-surface-100">Do you provide ongoing support?</span>
+                    <span class="font-medium text-surface-100">Предоставляете ли вы постоянную поддержку?</span>
                     <svg 
                         class="w-5 h-5 text-surface-400 transition-transform duration-200"
                         :class="active === 3 ? 'rotate-180' : ''"
@@ -352,7 +352,7 @@
                     class="px-6 pb-5"
                 >
                     <p class="text-surface-400">
-                        Yes! We offer various support packages including maintenance, updates, security monitoring, and feature enhancements. We're committed to your long-term success and are always here to help.
+                        Да! Мы предлагаем различные пакеты поддержки, включая техническое обслуживание, обновления, мониторинг безопасности и доработку функционала. Мы нацелены на ваш долгосрочный успех и всегда готовы помочь.
                     </p>
                 </div>
             </div>
@@ -363,7 +363,7 @@
                     @click="active = active === 4 ? null : 4"
                     class="w-full px-6 py-5 text-left flex items-center justify-between gap-4"
                 >
-                    <span class="font-medium text-surface-100">What technologies do you use?</span>
+                    <span class="font-medium text-surface-100">Какие технологии вы используете?</span>
                     <svg 
                         class="w-5 h-5 text-surface-400 transition-transform duration-200"
                         :class="active === 4 ? 'rotate-180' : ''"
@@ -380,7 +380,7 @@
                     class="px-6 pb-5"
                 >
                     <p class="text-surface-400">
-                        We specialize in modern web technologies including Laravel, React, Vue.js, Next.js, Tailwind CSS, and more. We choose the best tech stack for each project based on your specific needs and goals.
+                        Мы специализируемся на современных веб-технологиях: Laravel, React, Vue.js, Next.js, Tailwind CSS и других. Мы выбираем оптимальный стек технологий для каждого проекта, исходя из ваших потребностей и целей.
                     </p>
                 </div>
             </div>

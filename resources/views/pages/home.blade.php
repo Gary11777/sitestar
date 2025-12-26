@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
-@section('description', 'SiteStar - Modern web development studio crafting exceptional digital experiences through innovative design and cutting-edge technology.')
+@section('title', 'Главная')
+@section('description', 'SiteStar - Современная студия веб-разработки, создающая исключительный цифровой опыт с помощью инновационного дизайна и передовых технологий.')
 
 @section('content')
 <!-- Hero Section -->
@@ -21,16 +21,16 @@
             <div class="text-center lg:text-left" x-data="reveal()" class="reveal">
                 <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 border border-primary-200 rounded-full mb-8">
                     <span class="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
-                    <span class="text-sm text-primary-700">Available for new projects</span>
+                    <span class="text-sm text-primary-700">Доступны для новых проектов</span>
                 </div>
                 
                 <h1 class="heading-xl text-surface-100 mb-6">
-                    We Build
-                    <span class="block text-gradient" x-data="typed(['Digital Excellence', 'Modern Websites', 'User Experiences', 'Brand Stories'], 80, 40, 2500)" x-text="text + '|'"></span>
+                    Мы создаём
+                    <span class="block text-gradient" x-data="typed(['Цифровое совершенство', 'Современные сайты', 'Пользовательский опыт', 'Истории брендов'], 80, 40, 2500)" x-text="text + '|'"></span>
                 </h1>
                 
                 <p class="text-body max-w-xl mx-auto lg:mx-0 mb-10">
-                    A boutique web development studio specializing in crafting bespoke digital solutions that elevate brands and drive meaningful results.
+                    Студия веб-разработки, специализирующаяся на создании уникальных цифровых решений, которые приносят результаты.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -42,13 +42,13 @@
                         @mouseleave="handleMouseLeave"
                         :style="{ transform: `translate(${x}px, ${y}px)` }"
                     >
-                        View Our Work
+                        Наши работы
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                         </svg>
                     </a>
                     <a href="{{ route('contact') }}" class="btn-secondary">
-                        Get in Touch
+                        Связаться с нами
                     </a>
                 </div>
                 
@@ -56,15 +56,15 @@
                 <div class="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-surface-700">
                     <div class="text-center lg:text-left">
                         <div class="text-3xl font-bold text-surface-100" x-data="counter(50)" x-text="current + '+'"></div>
-                        <div class="text-sm text-surface-500">Projects Delivered</div>
+                        <div class="text-sm text-surface-500">Выполненных проектов</div>
                     </div>
                     <div class="text-center lg:text-left">
                         <div class="text-3xl font-bold text-surface-100" x-data="counter(5)" x-text="current + '+'"></div>
-                        <div class="text-sm text-surface-500">Years Experience</div>
+                        <div class="text-sm text-surface-500">Лет опыта</div>
                     </div>
                     <div class="text-center lg:text-left">
                         <div class="text-3xl font-bold text-surface-100" x-data="counter(100)" x-text="current + '%'"></div>
-                        <div class="text-sm text-surface-500">Client Satisfaction</div>
+                        <div class="text-sm text-surface-500">Довольных клиентов</div>
                     </div>
                 </div>
             </div>
@@ -137,7 +137,7 @@
     <!-- Scroll indicator -->
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
         <div class="flex flex-col items-center gap-2 text-surface-500">
-            <span class="text-xs uppercase tracking-widest">Scroll</span>
+            <span class="text-xs uppercase tracking-widest">Листайте</span>
             <div class="w-6 h-10 border-2 border-surface-600 rounded-full p-1">
                 <div class="w-1.5 h-1.5 bg-surface-500 rounded-full animate-bounce"></div>
             </div>
@@ -151,11 +151,11 @@
         <!-- Section Header -->
         <div class="text-center mb-16" x-data="reveal()" class="reveal">
             <span class="inline-block px-4 py-1.5 bg-primary-100 text-primary-700 text-sm font-medium rounded-full mb-4">
-                What We Do
+                Что мы делаем
             </span>
-            <h2 class="heading-lg text-surface-100 mb-4">Services We Offer</h2>
+            <h2 class="heading-lg text-surface-100 mb-4">Наши услуги</h2>
             <p class="text-body max-w-2xl mx-auto">
-                From concept to launch, we provide end-to-end digital solutions tailored to your unique needs.
+                От идеи до запуска — мы предоставляем комплексные цифровые решения, адаптированные под ваши потребности.
             </p>
         </div>
         
@@ -168,9 +168,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-surface-100 mb-3">Web Development</h3>
+                <h3 class="text-xl font-semibold text-surface-100 mb-3">Веб-разработка</h3>
                 <p class="text-surface-500 leading-relaxed">
-                    Custom web applications built with modern technologies. From landing pages to complex platforms, we deliver performant, scalable solutions.
+                    Индивидуальные веб-приложения на современных технологиях. От лендингов до сложных платформ — мы создаём быстрые и масштабируемые решения.
                 </p>
             </div>
             
@@ -181,9 +181,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-surface-100 mb-3">UI/UX Design</h3>
+                <h3 class="text-xl font-semibold text-surface-100 mb-3">UI/UX дизайн</h3>
                 <p class="text-surface-500 leading-relaxed">
-                    User-centered design that delights. We create intuitive interfaces and seamless experiences that convert visitors into customers.
+                    Дизайн, ориентированный на пользователя. Мы создаём интуитивные интерфейсы и бесшовный опыт, превращающий посетителей в клиентов.
                 </p>
             </div>
             
@@ -194,9 +194,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-surface-100 mb-3">E-commerce</h3>
+                <h3 class="text-xl font-semibold text-surface-100 mb-3">Интернет-магазины</h3>
                 <p class="text-surface-500 leading-relaxed">
-                    Powerful online stores that drive sales. From product catalogs to payment integration, we build complete e-commerce experiences.
+                    Мощные онлайн-магазины, которые увеличивают продажи. От каталогов до интеграции платежей — мы создаём полноценные e-commerce решения.
                 </p>
             </div>
             
@@ -207,9 +207,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-surface-100 mb-3">Brand Identity</h3>
+                <h3 class="text-xl font-semibold text-surface-100 mb-3">Фирменный стиль</h3>
                 <p class="text-surface-500 leading-relaxed">
-                    Distinctive visual identities that resonate. Logo design, color systems, and brand guidelines that tell your unique story.
+                    Уникальная визуальная идентичность. Дизайн логотипа, цветовые системы и бренд-гайдлайны, рассказывающие вашу историю.
                 </p>
             </div>
             
@@ -220,9 +220,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-surface-100 mb-3">Responsive Design</h3>
+                <h3 class="text-xl font-semibold text-surface-100 mb-3">Адаптивный дизайн</h3>
                 <p class="text-surface-500 leading-relaxed">
-                    Flawless experiences across all devices. Mobile-first approach ensuring your site looks perfect on any screen size.
+                    Безупречный опыт на всех устройствах. Mobile-first подход, гарантирующий идеальный вид на любом экране.
                 </p>
             </div>
             
@@ -233,9 +233,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-surface-100 mb-3">SEO Optimization</h3>
+                <h3 class="text-xl font-semibold text-surface-100 mb-3">SEO-оптимизация</h3>
                 <p class="text-surface-500 leading-relaxed">
-                    Visibility that drives growth. Technical SEO, performance optimization, and best practices to help you rank higher.
+                    Видимость, которая способствует росту. Техническое SEO, оптимизация производительности и лучшие практики для высоких позиций.
                 </p>
             </div>
         </div>
@@ -248,11 +248,11 @@
         <!-- Section Header -->
         <div class="text-center mb-16" x-data="reveal()" class="reveal">
             <span class="inline-block px-4 py-1.5 bg-accent-300/30 text-accent-600 text-sm font-medium rounded-full mb-4">
-                Our Process
+                Наш процесс
             </span>
-            <h2 class="heading-lg text-surface-100 mb-4">How We Work</h2>
+            <h2 class="heading-lg text-surface-100 mb-4">Как мы работаем</h2>
             <p class="text-body max-w-2xl mx-auto">
-                A proven methodology that delivers results, every time.
+                Проверенная методология, которая приносит результаты каждый раз.
             </p>
         </div>
         
@@ -268,9 +268,9 @@
                         <div class="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">
                             01
                         </div>
-                        <h3 class="text-lg font-semibold text-surface-100 mb-2">Discovery</h3>
+                        <h3 class="text-lg font-semibold text-surface-100 mb-2">Исследование</h3>
                         <p class="text-surface-500 text-sm">
-                            We dive deep into your goals, audience, and market to create a solid foundation for success.
+                            Мы глубоко изучаем ваши цели, аудиторию и рынок, чтобы создать прочную основу для успеха.
                         </p>
                     </div>
                 </div>
@@ -281,9 +281,9 @@
                         <div class="w-12 h-12 bg-accent-500 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">
                             02
                         </div>
-                        <h3 class="text-lg font-semibold text-surface-100 mb-2">Design</h3>
+                        <h3 class="text-lg font-semibold text-surface-100 mb-2">Дизайн</h3>
                         <p class="text-surface-500 text-sm">
-                            Crafting visual concepts and user flows that align with your brand and delight your users.
+                            Создаём визуальные концепции и пользовательские сценарии, соответствующие вашему бренду.
                         </p>
                     </div>
                 </div>
@@ -294,9 +294,9 @@
                         <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">
                             03
                         </div>
-                        <h3 class="text-lg font-semibold text-surface-100 mb-2">Development</h3>
+                        <h3 class="text-lg font-semibold text-surface-100 mb-2">Разработка</h3>
                         <p class="text-surface-500 text-sm">
-                            Building robust, scalable solutions with clean code and modern best practices.
+                            Создаём надёжные и масштабируемые решения с чистым кодом и современными практиками.
                         </p>
                     </div>
                 </div>
@@ -307,9 +307,9 @@
                         <div class="w-12 h-12 bg-pink-500 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">
                             04
                         </div>
-                        <h3 class="text-lg font-semibold text-surface-100 mb-2">Launch</h3>
+                        <h3 class="text-lg font-semibold text-surface-100 mb-2">Запуск</h3>
                         <p class="text-surface-500 text-sm">
-                            Deploying your project with care and providing ongoing support to ensure success.
+                            Запускаем ваш проект с заботой и обеспечиваем постоянную поддержку для успеха.
                         </p>
                     </div>
                 </div>
@@ -332,10 +332,10 @@
             
             <div class="relative px-8 py-16 sm:px-16 sm:py-20 text-center">
                 <h2 class="heading-lg text-surface-100 mb-4">
-                    Ready to Start Your Project?
+                    Готовы начать проект?
                 </h2>
                 <p class="text-body max-w-xl mx-auto mb-10">
-                    Let's collaborate to bring your vision to life. Get in touch and let's discuss how we can help your business grow.
+                    Давайте сотрудничать, чтобы воплотить вашу идею в жизнь. Свяжитесь с нами, и мы обсудим, как помочь вашему бизнесу расти.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a 
@@ -346,13 +346,13 @@
                         @mouseleave="handleMouseLeave"
                         :style="{ transform: `translate(${x}px, ${y}px)` }"
                     >
-                        Start a Conversation
+                        Начать разговор
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                         </svg>
                     </a>
                     <a href="{{ route('portfolio') }}" class="btn-secondary">
-                        View Portfolio
+                        Портфолио
                     </a>
                 </div>
             </div>
