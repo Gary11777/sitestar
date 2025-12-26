@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
-    <title>@yield('title', 'SiteStar') - Web Development & Design Studio</title>
-    <meta name="description" content="@yield('description', 'SiteStar is a modern web development studio crafting exceptional digital experiences through innovative design and cutting-edge technology.')">
+    <title>@yield('title', 'SiteStar') - Студия веб-разработки и дизайна</title>
+    <meta name="description" content="@yield('description', 'SiteStar - современная студия веб-разработки, создающая исключительный цифровой опыт с помощью инновационного дизайна и передовых технологий.')">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">

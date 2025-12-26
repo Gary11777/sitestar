@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'About Us')
-@section('description', 'Learn about SiteStar - a passionate team of designers and developers dedicated to creating exceptional digital experiences.')
+@section('title', 'О нас')
+@section('description', 'Узнайте больше о SiteStar - команде дизайнеров и разработчиков, создающих исключительный цифровой опыт.')
 
 @section('content')
 <!-- Hero Section -->
@@ -13,14 +13,14 @@
     <div class="relative max-w-7xl mx-auto">
         <div class="max-w-3xl" x-data="reveal()" class="reveal">
             <span class="inline-block px-4 py-1.5 bg-primary-100 text-primary-500 text-sm font-medium rounded-full mb-6">
-                About Us
+                О нас
             </span>
             <h1 class="heading-xl text-surface-100 mb-6">
-                We're a Team of
-                <span class="text-gradient">Digital Craftsmen</span>
+                Мы — команда
+                <span class="text-gradient">цифровых мастеров</span>
             </h1>
             <p class="text-body text-xl">
-                Founded with a vision to bridge the gap between creativity and technology, SiteStar has evolved into a full-service digital studio that transforms ideas into impactful digital experiences.
+                Основанная с целью объединить креативность и технологии, SiteStar превратилась в полноценную цифровую студию, превращающую идеи в эффективный цифровой опыт.
             </p>
         </div>
     </div>
@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             <div class="text-4xl font-bold text-surface-100 mb-2">2019</div>
-                            <div class="text-surface-400">Year Founded</div>
+                            <div class="text-surface-400">Год основания</div>
                         </div>
                     </div>
                 </div>
@@ -54,22 +54,22 @@
                 <!-- Floating stats -->
                 <div class="absolute -bottom-6 -right-6 bg-surface-800 border border-surface-700 rounded-2xl p-6 shadow-xl">
                     <div class="text-3xl font-bold text-surface-100 mb-1" x-data="counter(50)" x-text="current + '+'"></div>
-                    <div class="text-surface-400 text-sm">Happy Clients</div>
+                    <div class="text-surface-400 text-sm">Довольных клиентов</div>
                 </div>
             </div>
             
             <!-- Content -->
             <div x-data="reveal()" class="reveal">
-                <h2 class="heading-lg text-surface-100 mb-6">Our Story</h2>
+                <h2 class="heading-lg text-surface-100 mb-6">Наша история</h2>
                 <div class="space-y-4 text-surface-400 leading-relaxed">
                     <p>
-                        SiteStar began as a small freelance operation driven by a simple belief: every business deserves a powerful online presence. What started as one developer's passion project has grown into a dedicated team of creative professionals.
+                        SiteStar начиналась как небольшой фриланс-проект, основанный на простой идее: каждый бизнес заслуживает мощное онлайн-присутствие. То, что началось как проект одного разработчика, переросло в профессиональную команду креативных специалистов.
                     </p>
                     <p>
-                        Over the years, we've had the privilege of working with startups, established businesses, and everything in between. Each project has taught us something new and pushed us to refine our craft.
+                        За эти годы нам посчастливилось работать со стартапами, устоявшимися компаниями и всем, что между ними. Каждый проект научил нас чему-то новому и подтолкнул к совершенствованию.
                     </p>
                     <p>
-                        Today, we continue to operate with the same core values that got us started: transparency, quality, and a genuine commitment to our clients' success. We're not just building websites—we're building partnerships.
+                        Сегодня мы продолжаем работать с теми же ценностями: прозрачность, качество и искренняя приверженность успеху наших клиентов. Мы не просто создаём сайты — мы строим партнёрские отношения.
                     </p>
                 </div>
             </div>
@@ -83,11 +83,11 @@
         <!-- Section Header -->
         <div class="text-center mb-16" x-data="reveal()" class="reveal">
             <span class="inline-block px-4 py-1.5 bg-accent-300/30 text-accent-600 text-sm font-medium rounded-full mb-4">
-                Our Values
+                Наши ценности
             </span>
-            <h2 class="heading-lg text-surface-100 mb-4">What Drives Us</h2>
+            <h2 class="heading-lg text-surface-100 mb-4">Что нас движет</h2>
             <p class="text-body max-w-2xl mx-auto">
-                Our core values shape every decision we make and every project we deliver.
+                Наши основные ценности определяют каждое решение и каждый проект.
             </p>
         </div>
         
@@ -100,9 +100,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                     </svg>
                 </div>
-                <h3 class="text-lg font-semibold text-surface-100 mb-2">Quality First</h3>
+                <h3 class="text-lg font-semibold text-surface-100 mb-2">Качество прежде всего</h3>
                 <p class="text-surface-400 text-sm">
-                    We never compromise on quality. Every line of code, every pixel is crafted with care.
+                    Мы никогда не идём на компромисс в качестве. Каждая строка кода, каждый пиксель создан с заботой.
                 </p>
             </div>
             
@@ -113,9 +113,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                     </svg>
                 </div>
-                <h3 class="text-lg font-semibold text-surface-100 mb-2">Collaboration</h3>
+                <h3 class="text-lg font-semibold text-surface-100 mb-2">Сотрудничество</h3>
                 <p class="text-surface-400 text-sm">
-                    We work alongside our clients as partners, ensuring their vision guides every decision.
+                    Мы работаем с клиентами как партнёры, гарантируя, что их видение определяет каждое решение.
                 </p>
             </div>
             
@@ -126,9 +126,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                     </svg>
                 </div>
-                <h3 class="text-lg font-semibold text-surface-100 mb-2">Innovation</h3>
+                <h3 class="text-lg font-semibold text-surface-100 mb-2">Инновации</h3>
                 <p class="text-surface-400 text-sm">
-                    We stay ahead of the curve, embracing new technologies and approaches that benefit our clients.
+                    Мы идём в ногу со временем, внедряя новые технологии и подходы на благо клиентов.
                 </p>
             </div>
             
@@ -139,9 +139,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                     </svg>
                 </div>
-                <h3 class="text-lg font-semibold text-surface-100 mb-2">Passion</h3>
+                <h3 class="text-lg font-semibold text-surface-100 mb-2">Страсть</h3>
                 <p class="text-surface-400 text-sm">
-                    We genuinely love what we do. That passion shows in every project we deliver.
+                    Мы искренне любим своё дело. Эта страсть видна в каждом проекте.
                 </p>
             </div>
         </div>
@@ -155,11 +155,11 @@
             <!-- Content -->
             <div x-data="reveal()" class="reveal">
                 <span class="inline-block px-4 py-1.5 bg-primary-100 text-primary-500 text-sm font-medium rounded-full mb-6">
-                    Our Expertise
+                    Наша экспертиза
                 </span>
-                <h2 class="heading-lg text-surface-100 mb-6">Technologies We Master</h2>
+                <h2 class="heading-lg text-surface-100 mb-6">Технологии, которыми мы владеем</h2>
                 <p class="text-body mb-8">
-                    We work with modern, battle-tested technologies to ensure your project is built on a solid foundation.
+                    Мы работаем с современными, проверенными технологиями, чтобы ваш проект был построен на прочной основе.
                 </p>
                 
                 <!-- Tech Stack -->
@@ -211,7 +211,7 @@
                         <div class="space-y-6">
                             <div>
                                 <div class="flex justify-between mb-2">
-                                    <span class="text-surface-100 font-medium">Frontend Development</span>
+                                    <span class="text-surface-100 font-medium">Фронтенд-разработка</span>
                                     <span class="text-primary-500">95%</span>
                                 </div>
                                 <div class="h-2 bg-surface-700 rounded-full overflow-hidden">
@@ -220,7 +220,7 @@
                             </div>
                             <div>
                                 <div class="flex justify-between mb-2">
-                                    <span class="text-surface-100 font-medium">Backend Development</span>
+                                    <span class="text-surface-100 font-medium">Бэкенд-разработка</span>
                                     <span class="text-accent-600">90%</span>
                                 </div>
                                 <div class="h-2 bg-surface-700 rounded-full overflow-hidden">
@@ -229,7 +229,7 @@
                             </div>
                             <div>
                                 <div class="flex justify-between mb-2">
-                                    <span class="text-surface-100 font-medium">UI/UX Design</span>
+                                    <span class="text-surface-100 font-medium">UI/UX дизайн</span>
                                     <span class="text-green-400">88%</span>
                                 </div>
                                 <div class="h-2 bg-surface-700 rounded-full overflow-hidden">
@@ -238,7 +238,7 @@
                             </div>
                             <div>
                                 <div class="flex justify-between mb-2">
-                                    <span class="text-surface-100 font-medium">DevOps & Deployment</span>
+                                    <span class="text-surface-100 font-medium">DevOps и развёртывание</span>
                                     <span class="text-pink-400">85%</span>
                                 </div>
                                 <div class="h-2 bg-surface-700 rounded-full overflow-hidden">
@@ -267,10 +267,10 @@
             
             <div class="relative px-8 py-16 sm:px-16 sm:py-20 text-center">
                 <h2 class="heading-lg text-surface-100 mb-4">
-                    Let's Build Something Great Together
+                    Давайте создадим что-то великое вместе
                 </h2>
                 <p class="text-body max-w-xl mx-auto mb-10">
-                    Ready to take your digital presence to the next level? We'd love to hear about your project.
+                    Готовы вывести своё цифровое присутствие на новый уровень? Мы будем рады услышать о вашем проекте.
                 </p>
                 <a 
                     href="{{ route('contact') }}" 
@@ -280,7 +280,7 @@
                     @mouseleave="handleMouseLeave"
                     :style="{ transform: `translate(${x}px, ${y}px)` }"
                 >
-                    Get in Touch
+                    Связаться с нами
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                     </svg>

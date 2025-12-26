@@ -15,7 +15,7 @@
                         </span>
                     </a>
                     <p class="text-surface-500 text-sm leading-relaxed mb-6">
-                        Crafting exceptional digital experiences through innovative design and cutting-edge technology.
+                        Создаём исключительный цифровой опыт с помощью инновационного дизайна и передовых технологий.
                     </p>
                     <!-- Social Links -->
                     <div class="flex gap-4">
@@ -39,29 +39,29 @@
                 
                 <!-- Services Column -->
                 <div>
-                    <h3 class="text-sm font-semibold text-surface-200 uppercase tracking-wider mb-6">Services</h3>
+                    <h3 class="text-sm font-semibold text-surface-200 uppercase tracking-wider mb-6">Услуги</h3>
                     <ul class="space-y-4">
-                        <li><a href="{{ route('about') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">Web Development</a></li>
-                        <li><a href="{{ route('about') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">UI/UX Design</a></li>
-                        <li><a href="{{ route('about') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">E-commerce Solutions</a></li>
-                        <li><a href="{{ route('about') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">Brand Identity</a></li>
-                        <li><a href="{{ route('about') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">SEO Optimization</a></li>
+                        <li><a href="{{ route('about') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">Веб-разработка</a></li>
+                        <li><a href="{{ route('about') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">UI/UX дизайн</a></li>
+                        <li><a href="{{ route('about') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">E-commerce решения</a></li>
+                        <li><a href="{{ route('about') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">Фирменный стиль</a></li>
+                        <li><a href="{{ route('about') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">SEO-оптимизация</a></li>
                     </ul>
                 </div>
                 
                 <!-- Company Column -->
                 <div>
-                    <h3 class="text-sm font-semibold text-surface-200 uppercase tracking-wider mb-6">Company</h3>
+                    <h3 class="text-sm font-semibold text-surface-200 uppercase tracking-wider mb-6">Компания</h3>
                     <ul class="space-y-4">
-                        <li><a href="{{ route('about') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">About Us</a></li>
-                        <li><a href="{{ route('portfolio') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">Portfolio</a></li>
-                        <li><a href="{{ route('contact') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">Contact</a></li>
+                        <li><a href="{{ route('about') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">О нас</a></li>
+                        <li><a href="{{ route('portfolio') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">Портфолио</a></li>
+                        <li><a href="{{ route('contact') }}" class="text-surface-500 hover:text-surface-200 transition-colors text-sm">Контакты</a></li>
                     </ul>
                 </div>
                 
                 <!-- Contact Column -->
                 <div>
-                    <h3 class="text-sm font-semibold text-surface-200 uppercase tracking-wider mb-6">Get in Touch</h3>
+                    <h3 class="text-sm font-semibold text-surface-200 uppercase tracking-wider mb-6">Связаться</h3>
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
                             <svg class="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,7 +80,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                             </svg>
-                            <span class="text-surface-500 text-sm">Minsk, Belarus</span>
+                            <span class="text-surface-500 text-sm">Минск, Беларусь</span>
                         </li>
                     </ul>
                 </div>
@@ -91,11 +91,11 @@
         <div class="py-6 border-t border-surface-700">
             <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
                 <p class="text-surface-500 text-sm">
-                    &copy; {{ date('Y') }} SiteStar. All rights reserved.
+                    &copy; {{ date('Y') }} SiteStar. Все права защищены.
                 </p>
                 <div class="flex gap-6">
-                    <a href="#" class="text-surface-500 hover:text-surface-300 text-sm transition-colors">Privacy Policy</a>
-                    <a href="#" class="text-surface-500 hover:text-surface-300 text-sm transition-colors">Terms of Service</a>
+                    <a href="#" class="text-surface-500 hover:text-surface-300 text-sm transition-colors">Политика конфиденциальности</a>
+                    <a href="#" class="text-surface-500 hover:text-surface-300 text-sm transition-colors">Условия использования</a>
                 </div>
             </div>
         </div>
