@@ -1,59 +1,119 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# SiteStar - Web Development & Design Studio
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern, responsive Laravel website for SiteStar, a professional web development company. Built with Laravel, Tailwind CSS, and Alpine.js.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Modern Design**: Clean, minimal aesthetic with smooth animations and subtle effects
+- **Responsive**: Mobile-first approach, works on all devices
+- **Interactive Effects**: Scroll animations, parallax, magnetic buttons, card glow effects
+- **Secure Contact Form**: Includes multiple security layers:
+  - Cloudflare Turnstile (invisible bot detection)
+  - Honeypot field
+  - Rate limiting (5 requests/minute)
+  - CSRF protection
+  - Server-side validation
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Tech Stack
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Backend**: Laravel 12
+- **Frontend**: Tailwind CSS v4, Alpine.js
+- **Build Tool**: Vite
 
-## Learning Laravel
+## Pages
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- **Home**: Hero section with typing effect, services grid, process section
+- **About**: Company story, values, tech stack showcase
+- **Portfolio**: Project showcase (dimgent.com, dimgent.by)
+- **Contact**: Secure contact form with FAQ section
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Installation
 
-## Laravel Sponsors
+1. Clone the repository
+2. Install PHP dependencies:
+   ```bash
+   composer install
+   ```
+3. Install Node dependencies:
+   ```bash
+   npm install
+   ```
+4. Copy environment file:
+   ```bash
+   cp .env.example .env
+   ```
+5. Generate application key:
+   ```bash
+   php artisan key:generate
+   ```
+6. Start development server:
+   ```bash
+   npm run dev
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Configuration
 
-### Premium Partners
+### Mail Settings
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+The contact form uses sendmail by default. Configure in `.env`:
 
-## Contributing
+```env
+MAIL_MAILER=sendmail
+MAIL_SENDMAIL_PATH="/usr/sbin/sendmail -t -i"
+MAIL_FROM_ADDRESS="info@sitestar.by"
+MAIL_FROM_NAME="SiteStar"
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Cloudflare Turnstile (Optional)
 
-## Code of Conduct
+For enhanced bot protection, add your Turnstile keys:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```env
+TURNSTILE_SITE_KEY=your_site_key
+TURNSTILE_SECRET_KEY=your_secret_key
+```
 
-## Security Vulnerabilities
+Get keys at: https://dash.cloudflare.com/turnstile
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Project Structure
+
+```
+├── app/
+│   ├── Http/Controllers/
+│   │   └── ContactController.php    # Contact form handling
+│   └── Mail/
+│       └── ContactFormMail.php      # Email template class
+├── resources/
+│   ├── css/
+│   │   └── app.css                  # Tailwind config & custom styles
+│   ├── js/
+│   │   └── app.js                   # Alpine.js components
+│   └── views/
+│       ├── layouts/
+│       │   └── app.blade.php        # Main layout
+│       ├── partials/
+│       │   ├── header.blade.php     # Navigation
+│       │   └── footer.blade.php     # Footer
+│       ├── pages/
+│       │   ├── home.blade.php
+│       │   ├── about.blade.php
+│       │   ├── portfolio.blade.php
+│       │   └── contact.blade.php
+│       └── emails/
+│           └── contact.blade.php    # Email template
+└── routes/
+    └── web.php                      # Route definitions
+```
+
+## Special Effects
+
+- **Typed Text**: Animated typing effect in hero section
+- **Scroll Reveal**: Elements animate in as they enter viewport
+- **Parallax**: Subtle depth effect on scroll
+- **Magnetic Buttons**: Buttons follow cursor slightly
+- **Card Glow**: Interactive gradient follows mouse on cards
+- **Counter Animation**: Numbers animate when scrolled into view
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open-sourced software.

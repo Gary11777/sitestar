@@ -6,6 +6,306 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    
+    /* SiteStar Brand Colors - Clean light theme with amber/peach/coral accents */
+    /* Warm palette - Orange #F28500 as primary */
+    --color-primary-50: #fff8f0;
+    --color-primary-100: #ffedd5;
+    --color-primary-200: #ffd9a8;
+    --color-primary-300: #ffc178;
+    --color-primary-400: #f9a033;
+    --color-primary-500: #F28500;
+    --color-primary-600: #d97400;
+    --color-primary-700: #b86200;
+    --color-primary-800: #8f4d00;
+    --color-primary-900: #6b3a00;
+    
+    /* Neutral tones - Light theme (inverted usage) */
+    --color-surface-50: #09090b;
+    --color-surface-100: #18181b;
+    --color-surface-200: #27272a;
+    --color-surface-300: #3f3f46;
+    --color-surface-400: #52525b;
+    --color-surface-500: #71717a;
+    --color-surface-600: #a1a1aa;
+    --color-surface-700: #d4d4d8;
+    --color-surface-800: #e4e4e7;
+    --color-surface-900: #f4f4f5;
+    --color-surface-950: #ffffff;
+    
+    /* Coral/Peach accent for highlights */
+    --color-accent-300: #fca5a5;
+    --color-accent-400: #f87171;
+    --color-accent-500: #ef4444;
+    --color-accent-600: #dc2626;
+    
+    /* Animation timing */
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Custom utility classes */
+@layer utilities {
+    .text-gradient {
+        background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-700) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .bg-gradient-radial {
+        background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+    }
+    
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .animate-pulse-slow {
+        animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    .animate-fade-in {
+        animation: fadeIn 0.6s var(--ease-smooth) forwards;
+    }
+    
+    .animate-slide-up {
+        animation: slideUp 0.6s var(--ease-smooth) forwards;
+    }
+    
+    .animate-scale-in {
+        animation: scaleIn 0.5s var(--ease-smooth) forwards;
+    }
+    
+    .glass {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .glass-light {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        @apply bg-surface-950 text-surface-100 antialiased;
+        font-feature-settings: 'cv11', 'ss01';
+    }
+    
+    ::selection {
+        @apply bg-primary-300 text-surface-100;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-xl
+               transition-all duration-300 ease-out
+               focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-surface-950;
+    }
+    
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-xl
+               transition-all duration-300 ease-out
+               focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-white
+               bg-surface-100 text-white
+               hover:bg-surface-200 hover:shadow-lg hover:shadow-surface-100/25 hover:-translate-y-0.5
+               active:translate-y-0 active:shadow-md;
+    }
+    
+    .btn-secondary {
+        @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-xl
+               transition-all duration-300 ease-out
+               focus:outline-none focus:ring-2 focus:ring-surface-300/50 focus:ring-offset-2 focus:ring-offset-white
+               bg-white text-surface-100 border border-surface-700
+               hover:bg-surface-900 hover:border-surface-600 hover:-translate-y-0.5
+               active:translate-y-0;
+    }
+    
+    .btn-ghost {
+        @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-xl
+               transition-all duration-300 ease-out
+               focus:outline-none focus:ring-2 focus:ring-surface-300/50 focus:ring-offset-2 focus:ring-offset-white
+               text-surface-400
+               hover:text-surface-100 hover:bg-surface-800;
+    }
+    
+    .input {
+        @apply w-full px-4 py-3 bg-white border border-surface-700 rounded-xl
+               text-surface-100 placeholder:text-surface-500
+               transition-all duration-200
+               focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20;
+    }
+    
+    .card {
+        @apply bg-white border border-surface-700 rounded-2xl p-6
+               transition-all duration-300
+               hover:border-surface-600 hover:shadow-xl hover:shadow-surface-500/10;
+    }
+    
+    .section-padding {
+        @apply px-4 sm:px-6 lg:px-8 py-20 lg:py-32;
+    }
+    
+    .container-narrow {
+        @apply max-w-6xl mx-auto;
+    }
+    
+    .heading-xl {
+        @apply text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight;
+    }
+    
+    .heading-lg {
+        @apply text-3xl sm:text-4xl font-bold tracking-tight;
+    }
+    
+    .heading-md {
+        @apply text-2xl sm:text-3xl font-semibold tracking-tight;
+    }
+    
+    .text-body {
+        @apply text-surface-400 text-lg leading-relaxed;
+    }
+    
+    .link {
+        @apply text-primary-600 hover:text-primary-500 transition-colors duration-200;
+    }
+}
+
+/* Keyframe animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes scaleIn {
+    from { 
+        opacity: 0; 
+        transform: scale(0.95); 
+    }
+    to { 
+        opacity: 1; 
+        transform: scale(1); 
+    }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Scroll-triggered animation states */
+[x-cloak] { display: none !important; }
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s var(--ease-smooth), transform 0.6s var(--ease-smooth);
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s var(--ease-smooth), transform 0.5s var(--ease-smooth);
+}
+
+.reveal-scale.revealed {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s var(--ease-smooth), transform 0.5s var(--ease-smooth);
+}
+
+.stagger-children.revealed > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-children.revealed > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger-children.revealed > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger-children.revealed > *:nth-child(4) { transition-delay: 0.4s; }
+.stagger-children.revealed > *:nth-child(5) { transition-delay: 0.5s; }
+.stagger-children.revealed > *:nth-child(6) { transition-delay: 0.6s; }
+
+.stagger-children.revealed > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Magnetic button effect support */
+.magnetic-wrap {
+    display: inline-block;
+}
+
+/* Glow effect for cards on hover */
+.card-glow {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                rgba(14, 165, 233, 0.06), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.card-glow:hover::before {
+    opacity: 1;
+}
+
+/* Grid pattern background */
+.bg-grid {
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+/* Noise texture overlay */
+.noise::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.02;
+    pointer-events: none;
 }
